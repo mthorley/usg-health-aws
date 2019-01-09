@@ -2,11 +2,14 @@
 
 mkdir pkg
 
-cp src/*.py pkg
-
 cd pkg
 
-pip install boto3 -t ./
+rm -rf *
+
+cp ../src/*.py .
+
+# boto3 already provided by lambda
+pip install requests -t ./
 
 chmod -R 755 .
 
